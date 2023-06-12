@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.example.vkr_game2048.GameRelativeLayout
+        android:id="@+id/completeLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#FFFFFF"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textOperation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/textlines"
+            android:gravity="center"
+            android:text="@string/empty"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#000080"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textOperation"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/textlines"
+            android:gravity="center"
+            android:text="@string/empty"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#000000" />
+
+        <LinearLayout
+            android:id="@+id/threeFirstNumbers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textResult"
+            android:background="@drawable/border1"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/tv00"
+                style="@style/textViewGame"
+                android:background="@drawable/border_square"
+                android:text="@string/empty" />
+
+            <TextView
+                android:id="@+id/tv01"
+                style="@style/textViewGame"
+                android:background="@drawable/border_square"
+                android:text="@string/empty" />
+
+            <TextView
+                android:id="@+id/tv02"
+                style="@style/textViewGame"
+                android:background="@drawable/border_square"
+                android:text="@string/empty" />
+
+            <TextView
+                android:id="@+id/tv03"
+                style="@style/textViewGame"
+                android:background="@drawable/border_square"
+                android:text="@string/empty" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/threeMiddleNumbers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/threeFirstNumbers"
+            android:background="@drawable/border2"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/tv10"
+                style="@style/textViewGame"
+                android:background="@drawable/border_square"
+                android:text="@string/empty" />
+
+            <TextView
+                android:id="@+id/tv11"
+                style="@style/textViewGame"
+                android:background="@drawable/border_square"
+                android:text="@string/empty" />
+
+            <TextView
+                android:id="@+id/tv12"
+                style="@style/textViewGame"
+                android:background="@drawable/border_square"
+                android:text="@string/empty" />
+
+            <TextView
+                android:id="@+id/tv13"
+                style="@style/textViewGame"
+                android:background="@drawable/border_square"
+                android:text="@string/empty" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/threeTopNumbers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/threeMiddleNumbers"
+            android:background="@drawable/border2"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/tv20"
+                style="@style/textViewGame"
+                android:background="@drawable/border_square"
+                android:text="@string/empty" />
+
+            <TextView
+                android:id="@+id/tv21"
+                style="@style/textViewGame"
+                android:background="@drawable/border_square"
+                android:text="@string/empty" />
+
+            <TextView
+                android:id="@+id/tv22"
+                style="@style/textViewGame"
+                android:background="@drawable/border_square"
+                android:text="@string/empty" />
+
+            <TextView
+                android:id="@+id/tv23"
+                style="@style/textViewGame"
+                android:background="@drawable/border_square"
+                android:text="@string/empty" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/zeroNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/threeTopNumbers"
+            android:background="@drawable/border3"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/tv30"
+                style="@style/textViewGame"
+                android:background="@drawable/border_square"
+                android:text="@string/empty" />
+
+            <TextView
+                android:id="@+id/tv31"
+                style="@style/textViewGame"
+                android:background="@drawable/border_square"
+                android:text="@string/empty" />
+
+            <TextView
+                android:id="@+id/tv32"
+                style="@style/textViewGame"
+                android:background="@drawable/border_square"
+                android:text="@string/empty" />
+
+            <TextView
+                android:id="@+id/tv33"
+                style="@style/textViewGame"
+                android:background="@drawable/border_square"
+                android:text="@string/empty" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/scorelayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/zeroNumber"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/soundButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="20dp"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="10dp"
+                android:backgroundTint="@color/white">
+
+                <ImageView
+                    android:id="@+id/soundsImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/onsoundicon"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/vibrationButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:backgroundTint="@color/white"
+                android:drawable="@drawable/onvibrationicon"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="10dp">
+
+                <ImageView
+                    android:id="@+id/vibrationImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/onvibrationicon"/>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/achievement"
+                android:layout_marginEnd="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="16dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/blue3"
+                android:onClick="openAchievementsActivity"
+                android:text="Достижения" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/scorelayout"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="211dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/bonuses"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:text="БОНУСЫ (текущее количество: 0)"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/destroy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/blue3"
+                android:gravity="center"
+                android:onClick="openAchievementsActivity"
+                android:text="Обнулить ячейку" />
+
+            <Button
+                android:id="@+id/swap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/blue3"
+                android:gravity="center"
+                android:onClick="openAchievementsActivity"
+                android:text="Поменять ячейки местами" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/newgame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="40dp"
+            android:backgroundTint="@color/blue3"
+            android:onClick="newgameButton"
+            android:text="Новая игра" />
+
+        <FrameLayout
+            android:id="@+id/achievement_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </FrameLayout>
+
+
+    </com.example.vkr_game2048.GameRelativeLayout>
+
+</LinearLayout>
